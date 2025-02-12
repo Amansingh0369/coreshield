@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    body {
+        @apply bg-black;
+    }
+  :root {
+        --radius: 0.5rem;
+    }
+}
+
+.title-gradient {
+    @apply bg-clip-text text-transparent bg-black;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
