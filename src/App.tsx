@@ -80,12 +80,12 @@ const router = createBrowserRouter([
     errorElement: <h1>Oops! Page not found.</h1>,
   },
   {
-    path: "/home",
+    path: "/",
     element: <Layout />,
     errorElement: <h1>Oops! Something went wrong.</h1>,
     children: [
       {
-        index: true, // ✅ Fix: This ensures Home is rendered at "/home"
+        path: "home",
         element: <Home />,
       },
       {
