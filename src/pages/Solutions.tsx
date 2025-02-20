@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Eye, Brain, Bot, Command } from 'lucide-react';
 
 const Solutions = () => {
