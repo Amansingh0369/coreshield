@@ -72,7 +72,6 @@ const Layout = () => {
   );
 };
 
-// ✅ Fixed routing setup
 const router = createBrowserRouter([
   {
     path: "/",

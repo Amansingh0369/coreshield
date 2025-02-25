@@ -1,14 +1,31 @@
+import WhoWeAre from '@/components/whoWeAre';
 import Hero from '../components/Hero';
-import { BentoDemo } from '../components/magicui/BentoDemo';
-import { TextRevealDemo } from '../components/TextRevealDemo';
+import WhatWeDo from '@/components/whatWeDo';
+import Research from '@/components/Research';
+import ContactFooter from '@/components/Contact';
+
 const Home = () => {
-  return(
-    <div>
-      <Hero />
-      <TextRevealDemo />
-      <BentoDemo />
+  return (
+    <div className="bg-black min-h-screen">
+      <main>
+        <section className="relative z-20">
+          <Hero />
+        </section>
+        <section className="relative z-20">
+          <WhoWeAre/>
+        </section>
+        <section className="relative z-20">
+          <WhatWeDo/>
+        </section>
+        <section className="relative z-10">
+          <Research />
+        </section>
+        <section className="relative z-10">
+          <ContactFooter />
+        </section>
+      </main>
     </div>
-  ) ;
+  );
 };
 
 export default Home;

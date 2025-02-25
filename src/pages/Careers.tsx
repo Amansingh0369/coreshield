@@ -1,5 +1,6 @@
-import React from 'react';
 import { Code, Layout, Database, Brain, BarChart as ChartBar, Shield, Cog } from 'lucide-react';
+import ContactFooter from '@/components/Contact';
+// import meeting from "../asset/meeting.jpeg"
 
 const Careers = () => {
   const positions = [
@@ -9,13 +10,13 @@ const Careers = () => {
       description: 'Develop full-stack web applications to support AI-powered defense solutions.',
       requirements: [
         'Experience with React, Node.js, and TypeScript',
-        'Understanding of cloud platforms',
+        'Understanding of cloud platforms', 
         'Knowledge of security best practices',
       ],
     },
     {
       title: 'UI Developer',
-      icon: Layout,
+      icon: Layout, 
       description: 'Develop user-friendly interfaces for AI-driven defense applications.',
       requirements: [
         'Expertise in modern frontend frameworks',
@@ -76,90 +77,125 @@ const Careers = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white mb-4">Join Our Team</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+    <div>
+      <div className="min-h-screen">
+      {/* Hero Section - Black */}
+      <div className="bg-black text-white py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-7xl font-extralight mb-8 uppercase tracking-tight">Join Our Team</h1>
+          <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed">
             Be part of a dynamic team dedicated to innovation and excellence in defense technology solutions.
-            We're looking for passionate individuals who want to make a difference in India's defense sector.
           </p>
         </div>
+      </div>
 
-        {/* Why Join Us */}
-        <div className="bg-black rounded-2xl p-8 mb-16 border border-gray-800">
-          <h2 className="text-2xl font-bold text-white mb-6">Why Join Coreshield?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-black p-6 rounded-xl border border-gray-800">
-              <h3 className="text-lg font-semibold text-white mb-2">Innovation First</h3>
-              <p className="text-gray-300">Work with cutting-edge technologies and shape the future of defense.</p>
-            </div>
-            <div className="bg-black p-6 rounded-xl border border-gray-800">
-              <h3 className="text-lg font-semibold text-white mb-2">Growth Opportunities</h3>
-              <p className="text-gray-300">Continuous learning and career development programs.</p>
-            </div>
-            <div className="bg-black p-6 rounded-xl border border-gray-800">
-              <h3 className="text-lg font-semibold text-white mb-2">Meaningful Impact</h3>
-              <p className="text-gray-300">Contribute to India's defense capabilities and national security.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Open Positions */}
-        <h2 className="text-2xl font-bold text-white mb-8">Open Positions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {positions.map((position) => {
-            const IconComponent = position.icon;
-            return (
-              <div key={position.title} className="bg-black p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-800">
-                <div className="flex items-center mb-4">
-                  <IconComponent className="h-8 w-8 text-indigo-600 mr-3" />
-                  <h3 className="text-xl font-bold text-white">{position.title}</h3>
+      {/* Life at Coreshield Section - White */}
+      <div className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-6xl font-extralight text-black text-center mb-16 uppercase tracking-tight">Life at Coreshield</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl">
+              <img 
+                src=""
+                alt="Work Marathon" 
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <div>
+                  <h3 className="text-white text-2xl font-extralight mb-2">Work Marathons</h3>
+                  <p className="text-gray-200 font-light">Collaborative problem-solving sessions</p>
                 </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-white">Requirements:</h4>
-                  <ul className="list-disc list-inside text-gray-300 space-y-1">
-                    {position.requirements.map((req, index) => (
-                      <li key={index}>{req}</li>
-                    ))}
-                  </ul>
-                </div>
-                <button className="mt-6 w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors">
-                  Apply Now
-                </button>
               </div>
-            );
-          })}
-        </div>
-
-        {/* Application Process */}
-        <div className="mt-16 bg-black p-8 rounded-xl shadow-lg border border-gray-800">
-          <h2 className="text-2xl font-bold text-white mb-6">Application Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="h-12 w-12 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">1</div>
-              <h3 className="font-semibold text-white mb-2">Apply Online</h3>
-              <p className="text-gray-300">Submit your application and resume</p>
             </div>
-            <div className="text-center">
-              <div className="h-12 w-12 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">2</div>
-              <h3 className="font-semibold text-white mb-2">Initial Review</h3>
-              <p className="text-gray-300">Our team reviews your application</p>
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl">
+              <img 
+                src=""
+                alt="Team Lunch" 
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <div>
+                  <h3 className="text-white text-2xl font-extralight mb-2">Team Lunches</h3>
+                  <p className="text-gray-200 font-light">Building bonds beyond work</p>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="h-12 w-12 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">3</div>
-              <h3 className="font-semibold text-white mb-2">Interviews</h3>
-              <p className="text-gray-300">Technical and cultural fit interviews</p>
-            </div>
-            <div className="text-center">
-              <div className="h-12 w-12 bg-indigo-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">4</div>
-              <h3 className="font-semibold text-white mb-2">Offer</h3>
-              <p className="text-gray-300">Welcome to the team!</p>
+            <div className="group relative overflow-hidden rounded-2xl shadow-xl">
+              <img 
+                src=""
+                alt="Innovation Lab" 
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                <div>
+                  <h3 className="text-white text-2xl font-extralight mb-2">Innovation Lab</h3>
+                  <p className="text-gray-200 font-light">Where ideas come to life</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Open Positions Section - Black */}
+      <div className="bg-black text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-6xl font-extralight text-center mb-16 uppercase tracking-tight">Open Positions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {positions.map((position) => {
+              const IconComponent = position.icon;
+              return (
+                <div key={position.title} className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all">
+                  <div className="flex items-center mb-6">
+                    <IconComponent className="h-10 w-10 text-white mr-4" />
+                    <h3 className="text-2xl font-extralight">{position.title}</h3>
+                  </div>
+                  <p className="text-gray-300 text-xl font-light mb-6">{position.description}</p>
+                  <div className="space-y-4">
+                    <h4 className="font-extralight text-xl">Requirements:</h4>
+                    <ul className="space-y-2 text-gray-300">
+                      {position.requirements.map((req, index) => (
+                        <li key={index} className="flex items-center text-lg font-light">
+                          <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <button className="mt-8 w-full bg-white text-black py-3 px-6 rounded-lg font-extralight text-lg hover:bg-gray-100 transition-colors">
+                    Apply Now
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Application Process Section - White */}
+      <div className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-6xl font-extralight text-black text-center mb-16 uppercase tracking-tight">Application Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {step: 1, title: 'Apply Online', desc: 'Submit your application and resume'},
+              {step: 2, title: 'Initial Review', desc: 'Our team reviews your application'},
+              {step: 3, title: 'Interviews', desc: 'Technical and cultural fit interviews'},
+              {step: 4, title: 'Offer', desc: 'Welcome to the team!'}
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="h-16 w-16 bg-black text-white text-2xl font-extralight rounded-full flex items-center justify-center mx-auto mb-6">
+                  {item.step}
+                </div>
+                <h3 className="text-2xl font-extralight text-black mb-3">{item.title}</h3>
+                <p className="text-xl text-gray-600 font-light">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+    <ContactFooter/>
     </div>
   );
 };

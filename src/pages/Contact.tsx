@@ -1,120 +1,85 @@
-import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import ContactFooter from '@/components/Contact';
 
 const Contact = () => {
   return (
-    <div className="pt-24 pb-16 bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+    <div className="pt-32 pb-0 bg-white">
+      <div className="max-w-7xl mx-auto px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h1 className="text-5xl md:text-7xl font-extralight text-black mb-6 tracking-tight uppercase">Contact Us</h1>
+          <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Get in touch with us to learn more about our defense technology solutions
             and how we can help strengthen India's defense capabilities.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-black p-8 rounded-xl shadow-lg border border-gray-800">
-            <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-4 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white"
-                  placeholder="you@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  className="w-full px-4 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white"
-                  placeholder="How can we help?"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-4 py-2 bg-black border border-gray-800 rounded-md focus:ring-indigo-500 focus:border-indigo-500 text-white"
-                  placeholder="Your message"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Map */}
+          <div className="bg-black py-10 px-4  md:p-10 overflow-hidden rounded-2xl shadow-2xl border border-gray-800 backdrop-blur-sm hover:border-gray-700 transition-all duration-300 h-full">
+            <h2 className="text-3xl font-extralight text-white mb-8 uppercase">Our Location</h2>
+            <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.65,12.84,77.67,12.85&layer=mapnik"
+              width="100%"
+              height="90%"
+              style={{ border: 0, minHeight: '450px' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-xl shadow-lg"
+            ></iframe>
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-black p-8 rounded-xl border border-gray-800">
-              <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-indigo-600 mr-3 mt-1" />
+          <div className="space-y-10">
+            <div className="bg-white p-10 rounded-2xl border border-gray-200 shadow-lg">
+              <h2 className="text-3xl font-extralight text-black mb-8 uppercase">Contact Information</h2>
+              <div className="space-y-8">
+                <div className="flex items-start group">
+                  <MapPin className="h-7 w-7 text-blue-500 mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
                   <div>
-                    <h3 className="font-semibold text-white">Office Location</h3>
-                    <p className="text-gray-300">Bangalore, Karnataka, India</p>
+                    <div className="mb-6">
+                      <h3 className="font-light text-black text-lg mb-2">Operating Address</h3>
+                      <p className="text-gray-600 leading-relaxed">18 C, Ummaid Heritage<br />Jodhpur - 342011, RJ</p>
+                    </div>
+                    <div className="mb-6">
+                      <h3 className="font-light text-black text-lg mb-2">Registered Address</h3>
+                      <p className="text-gray-600 leading-relaxed">NEEDS3, Electronic City<br />Bengaluru - 560100, KA</p>
+                    </div>
+                    <div>
+                      <h3 className="font-light text-black text-lg mb-2">IDEX Partner Incubator</h3>
+                      <p className="text-gray-600 leading-relaxed">FITT, IIT Delhi<br />Delhi</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <Mail className="h-6 w-6 text-indigo-600 mr-3 mt-1" />
+                <div className="flex items-start group">
+                  <Mail className="h-7 w-7 text-blue-500 mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
                   <div>
-                    <h3 className="font-semibold text-white">Email</h3>
-                    <p className="text-gray-300">contact@coreshield.com</p>
+                    <h3 className="font-light text-black text-lg mb-2">Email</h3>
+                    <a href="mailto:contact@coreshield.com" className="text-gray-600 hover:text-black transition-colors">contact@coreshield.com</a>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-indigo-600 mr-3 mt-1" />
+                <div className="flex items-start group">
+                  <Phone className="h-7 w-7 text-blue-500 mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
                   <div>
-                    <h3 className="font-semibold text-white">Phone</h3>
-                    <p className="text-gray-300">+91 (080) 1234-5678</p>
+                    <h3 className="font-light text-black text-lg mb-2">Phone</h3>
+                    <a href="tel:+910801234567" className="text-gray-600 hover:text-black transition-colors">+91 (080) 1234-5678</a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-black p-8 rounded-xl shadow-lg border border-gray-800">
-              <h2 className="text-2xl font-bold text-white mb-4">Business Hours</h2>
-              <div className="space-y-2">
-                <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p className="text-gray-300">Saturday: 9:00 AM - 1:00 PM</p>
-                <p className="text-gray-300">Sunday: Closed</p>
+            <div className="bg-white p-10 rounded-2xl border border-gray-200 shadow-lg">
+              <h2 className="text-3xl font-extralight text-black mb-6 uppercase">Business Hours</h2>
+              <div className="space-y-3">
+                <p className="text-gray-600 text-lg">Monday - Friday: <span className="text-black">9:00 AM - 6:00 PM</span></p>
+                <p className="text-gray-600 text-lg">Saturday: <span className="text-black">9:00 AM - 1:00 PM</span></p>
+                <p className="text-gray-600 text-lg">Sunday: <span className="text-black">Closed</span></p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ContactFooter />
     </div>
   );
 };

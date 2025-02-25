@@ -8,7 +8,7 @@ const Solutions = () => {
       description: 'Advanced video surveillance system tailored for the Indian defense forces, offering real-time, high-definition monitoring with robust security measures.',
     },
     {
-      name: 'SIDDHI',
+      name: 'SIDDHI', 
       icon: Brain,
       description: 'AI-driven analytical platform that converts raw data into actionable intelligence, leveraging sophisticated AI algorithms for prompt decision-making.',
     },
@@ -29,8 +29,11 @@ const Solutions = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Shield className="h-16 w-16 text-indigo-600 mx-auto mb-4" />
-          <h1 className="text-4xl font-bold text-white mb-4">Our Solutions</h1>
+          <h1 className="text-4xl font-bold text-white mb-4">Solutions</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our technology integrates AI-driven threat detection, predictive analytics, and IoT-based asset monitoring to enhance situational awareness and proactive crisis management system. With real-time video, audio, and data intelligence, we empower every responder.
+          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-4">
             As a premier defense technology enterprise based in India, we specialize in advanced video surveillance
             and modern warfare analytics for the Indian defense forces.
           </p>
