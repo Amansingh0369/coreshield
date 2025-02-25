@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Content overlay */}
       <div className="relative   flex flex-col items-center justify-center min-h-screen text-center px-6">
         <div className="max-w-5xl">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl tracking-tight font-semi-bold text-white space-y-2">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl tracking-tight font-extralight text-white space-y-2">
             <span className="block uppercase tracking-wider">The Future is Here</span>
           </h1>
           <p className="mt-6 text-base md:text-2xl leading-8 font-light text-gray-200 max-w-3xl mx-auto">

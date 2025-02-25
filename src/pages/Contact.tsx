@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import ContactFooter from '@/components/Contact';
+import BackedBy from '@/components/Backedby';
 
 const Contact = () => {
   return (
@@ -32,10 +33,10 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-10">
             <div className="bg-white p-10 rounded-2xl border border-gray-200 shadow-lg">
-              <h2 className="text-3xl font-extralight text-black mb-8 uppercase">Contact Information</h2>
+              <h2 className="text-3xl font-light text-black mb-8 uppercase">Contact Information</h2>
               <div className="space-y-8">
                 <div className="flex items-start group">
-                  <MapPin className="h-7 w-7 text-blue-500 mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
+                  <MapPin className="h-7 w-7 text-black mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
                   <div>
                     <div className="mb-6">
                       <h3 className="font-light text-black text-lg mb-2">Operating Address</h3>
@@ -52,17 +53,17 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-start group">
-                  <Mail className="h-7 w-7 text-blue-500 mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
+                  <Mail className="h-7 w-7 text-black mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
                   <div>
                     <h3 className="font-light text-black text-lg mb-2">Email</h3>
-                    <a href="mailto:contact@coreshield.com" className="text-gray-600 hover:text-black transition-colors">contact@coreshield.com</a>
+                    <a href="mailto:contact@coreshield.com" className="text-gray-600 hover:text-black transition-colors">support@coreshield.com</a>
                   </div>
                 </div>
                 <div className="flex items-start group">
-                  <Phone className="h-7 w-7 text-blue-500 mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
+                  <Phone className="h-7 w-7 text-black mr-4 mt-1 group-hover:text-indigo-600 transition-colors" />
                   <div>
                     <h3 className="font-light text-black text-lg mb-2">Phone</h3>
-                    <a href="tel:+910801234567" className="text-gray-600 hover:text-black transition-colors">+91 (080) 1234-5678</a>
+                    <a href="tel:+910801234567" className="text-gray-600 hover:text-black transition-colors">+91 9899586749</a>
                   </div>
                 </div>
               </div>
@@ -79,6 +80,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <BackedBy/>
       <ContactFooter />
     </div>
   );

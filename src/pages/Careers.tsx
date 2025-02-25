@@ -1,6 +1,7 @@
 import { Code, Layout, Database, Brain, BarChart as ChartBar, Shield, Cog } from 'lucide-react';
 import ContactFooter from '@/components/Contact';
-// import meeting from "../asset/meeting.jpeg"
+import meeting from "../asset/meeting.jpeg"
+import BackedBy from '@/components/Backedby';
 
 const Careers = () => {
   const positions = [
@@ -80,7 +81,7 @@ const Careers = () => {
     <div>
       <div className="min-h-screen">
       {/* Hero Section - Black */}
-      <div className="bg-black text-white py-24">
+      <div className="bg-black text-white py-24 md:py-44 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-7xl font-extralight mb-8 uppercase tracking-tight">Join Our Team</h1>
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed">
@@ -96,7 +97,7 @@ const Careers = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="group relative overflow-hidden rounded-2xl shadow-xl">
               <img 
-                src=""
+                src={meeting}
                 alt="Work Marathon" 
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -109,7 +110,7 @@ const Careers = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl shadow-xl">
               <img 
-                src=""
+                src={meeting}
                 alt="Team Lunch" 
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -122,7 +123,7 @@ const Careers = () => {
             </div>
             <div className="group relative overflow-hidden rounded-2xl shadow-xl">
               <img 
-                src=""
+                src={meeting}
                 alt="Innovation Lab" 
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -195,6 +196,7 @@ const Careers = () => {
         </div>
       </div>
     </div>
+    <BackedBy/>
     <ContactFooter/>
     </div>
   );

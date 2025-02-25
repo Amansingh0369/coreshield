@@ -32,7 +32,7 @@ const SplashScreen = () => {
         {/* Logo container */}
         <div className="relative z-10">
           <div className="animate-[slide-in_2s_ease-in-out_forwards]">
-            <img src="/coreshield.png" alt="Logo" className="w-60 h-32" />
+            <img src="/coreshield.png" alt="Logo" className="w-full h-32" />
           </div>
         </div>
       </div>

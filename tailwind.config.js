@@ -12,9 +12,19 @@ export default {
             colors: {},
             animation: {
                 spotlight: "spotlight 2s ease .75s 1 forwards",
-                glow: "glow 4s ease-in-out infinite", // Added glow animation
+                glow: "glow 4s ease-in-out infinite",
+                'marquee-left': 'marquee-left 25s linear infinite',
+                'marquee-right': 'marquee-right 25s linear infinite', // Added glow animation
             },
             keyframes: {
+                'marquee-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        'marquee-right': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
                 spotlight: {
                     "0%": {
                         opacity: 0,
